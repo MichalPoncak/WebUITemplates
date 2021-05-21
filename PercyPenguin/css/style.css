@@ -1,0 +1,152 @@
+/**********************************************************/
+/* Legendarypercy.comze.com Web Development Theme CSS     */
+/* Created by Michal Poncak                 			  */
+/**********************************************************/
+
+/* Header */
+#wrapper
+{
+	width: 950px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#header
+{
+	height: 124px;
+	margin-left: -35px;
+	margin-bottom: -5px;
+}
+.contactMePenguin
+{
+	width: 130px;
+	height: 130px;
+	float: right;
+	border: 0px;
+	position: absolute;
+	margin-left: 43px;
+}
+/* Body */
+#main
+{
+	margin-left: auto;
+	margin-right: auto;
+	background: rgba(204, 204, 204, .4);
+	border-radius: 5px 5px 10px 10px;
+	width: 950px;
+	padding: 10px;
+	-webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0px 0px 15px rgba(204, 204, 204, 0.5);
+	-moz-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0px 0px 15px rgba(204, 204, 204, 0.5);
+	box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0px 0px 15px rgba(204, 204, 204, 0.5);
+}
+.clearfix { zoom: 1; }
+#content-top
+{
+	width: 940px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	/*background: #00a19b;*/
+	background: white;
+	border-radius: 5px 5px 10px 10px;
+}
+#content
+{
+	width: 940px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	padding-bottom: 40px;
+	padding-top: 10px;
+	/*background: #00a19b;*/
+	background: white;
+	border-radius: 5px 5px 10px 10px;
+}
+body
+{
+	background-color: #049CDB;
+}
+a {
+	border: 0px;
+	text-decoration: none;
+	-webkit-transition: all 100ms linear;
+	transition: all 100ms linear;
+}
+
+a:hover {
+	color: pink;
+	text-shadow: 0 1px 0 #fff;
+}
+
+.game
+{
+	padding: 0px;
+}
+.entry-content
+{
+	float: left;
+	padding: 10px;
+	margin-top: -30px;
+	width: 592px;
+	height: 160px;
+}
+
+.entry-content p
+{
+	text-align: justify;
+}
+
+.thumbnail
+{
+	margin-left: -30px;
+	float: left;
+	width: 300px;
+	height: 200px;
+	border-radius: 5px 5px 10px 10px;
+}
+
+.xxx
+{
+	width: 930px;
+	height: 240px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 10px;
+}
+input
+{
+	margin-left: 10px;
+	background: lightblue;
+}
+.btn
+{
+	border: 0px;
+	margin: 0px 0px 55px 55px;
+	height: 50px;
+	width: 220px;
+}
+/* Footer */
+#footer
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+#footer a
+{
+	color: white;
+}
+
+
+/* Slider */
+#slider{ background: url(images/slider.png); width:910px; height:309px; margin:0 auto; position:relative; z-index: 1; color:#fff; }
+#slider .image{ float: left; display: inline; width:345px; padding-top:19px; text-align: center; padding-right:50px}
+#slider .info{ float: left; display: inline; width:435px; padding-top:52px; font-size: 11px; color:#fff;text-align: justify;}
+#slider h2{ font-size: 36px; color:#fff; font-family: "Myriad Pro", "Trebuchet MS", sans-serif; font-weight: normal; padding-bottom:14px;}
+#slider-nav { position: absolute; right: 17px; bottom: 22px; z-index: 3; }
+#slider-nav ul { list-style-type: none; }
+#slider-nav ul li { float: left; display: inline; padding-right: 3px; height: 17px; width: 17px; }
+#slider-nav ul li a { float: left; display: inline; font-size: 0; line-height: 0; text-indent: -4000px; height: 17px; width: 17px;  }
+#slider-nav ul li a { background: #fff;}
+#slider-nav ul li a:hover,
+#slider-nav ul li a.active { background:#3a3939}
