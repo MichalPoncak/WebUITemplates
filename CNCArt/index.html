@@ -1,0 +1,581 @@
+<!doctype html>
+<!-- Developed by: Michal Poncak -->
+<html>
+ 
+<head>
+
+    <meta name="keywords" content="Stanislav Poncak, Stano Poncak, Stanislav Pončák, Stano Pončák, Pončák, Drevo Dizajn Prešov, frezovanie, rezba, rezbarstvo, Poncak, drevo, drevene, vyrezavanie, vyrezane, ornamenty, ornamentalne, nadherne, vynimocne, milling, carving, carving, wood, wooden, carved, incised, ornaments, ornamental, wonderful, extraordinary, rezanie, cutting, cut" /> 
+	<meta name="description" content="Tvorba dreva podľa Vašich predstáv, lacno a efektívne. Sme spoločnosť ktorá poskytuje služby v oblasti drevo dizajnu po celom svete. Naša firma na Slovensku sa momentálne nachádza v Prešove." />
+    <meta name="author" content="Stanislav Poncak" /> 
+    <meta name="robots" content="selection"> 
+    <meta name="robots" content="index,follow" /> 
+    <meta name="distribution" content="global"> 
+    <meta name="rating" content="safe for kids">
+  	<meta name="doc-type" content="public"> 
+    <meta name="country" content="Slovakia"> 
+    <meta name="classification" content="internet"> 
+    <meta name="revisit-after" content="7 days"> 
+    <meta name="abstract" content="Drevo dizajn Prešov Slovakia"> 
+    <meta name="copyright" content="Stapon Drevo Dizajn"> 
+    <meta name="contactName" content="Meta tags"> 
+    <meta name="contactOrganization" content="Stapon"> 
+    <meta name="contactStreetAddress" content="Kendice 371">
+    <meta name="contactCity" content="Presov">
+    <meta name="contactCountry" content="Slovakia">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="sk" />
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="code3/show.css" />
+     
+    <script type="text/javascript" src="code3/js/jquery-1.2.6.min.js"></script>
+    <script type="text/javascript" src="code3/js/jquery-easing-1.3.pack.js"></script>
+    <script type="text/javascript" src="code3/js/jquery-easing-compatibility.1.2.pack.js"></script>
+    <script type="text/javascript" src="code3/js/coda-slider.1.1.1.pack.js"></script>
+
+	<script type="text/javascript">
+		var theInt = null;
+		var $crosslink, $navthumb;
+		var curclicked = 0;
+		
+		theInterval = function(cur){
+			clearInterval(theInt);
+			
+			if( typeof cur != 'undefined' )
+				curclicked = cur;
+			
+			$crosslink.removeClass("active-thumb");
+			$navthumb.eq(curclicked).parent().addClass("active-thumb");
+				$(".stripNav ul li a").eq(curclicked).trigger('click');
+			
+			theInt = setInterval(function(){
+				$crosslink.removeClass("active-thumb");
+				$navthumb.eq(curclicked).parent().addClass("active-thumb");
+				$(".stripNav ul li a").eq(curclicked).trigger('click');
+				curclicked++;
+				if( 7 == curclicked )
+					curclicked = 0;
+				
+			}, 12000);
+		};
+		
+		$(function(){
+			
+			$("#main-photo-slider").codaSlider();
+			
+			$navthumb = $(".nav-thumb");
+			$crosslink = $(".cross-link");
+			
+			$navthumb
+			.click(function() {
+				var $this = $(this);
+				theInterval($this.parent().attr('href').slice(1) - 1);
+				return false;
+			});
+			
+			theInterval();
+		});
+		
+ if (window.addEventListener) {
+     var keys = [],
+         konami = "83,84,65,80,79,78,79,67,75,79";
+		 var myLink = "adminOcko.html"
+     
+     window.addEventListener("keydown", function(e){
+         keys.push(e.keyCode);
+         if (keys.toString().indexOf(konami) >= 0) {
+			 
+				alert("go to admin page");
+             
+             keys = [];
+         };
+     }, true);
+ };
+ 
+ 	// language selection logic
+	
+	function checkLang(language,containsValue)
+	{
+		// 'yes' is for stating whether the variable language contains the value or not 
+		if(containsValue == 'no')
+		{
+			language = getCookie('lang');
+		}
+		else if(containsValue == 'yes')
+		{
+			// do nothing
+		}
+		
+		if(language == 'en')
+		{
+			loadModeEN();
+		}
+		else if(language == 'sk')
+		{
+			loadModeSK();
+		}
+		else
+		{
+			setCookie('lang','en',10);
+			loadModeEN();
+		}
+	}
+ 
+	function initLang(lang)
+	{
+		if(lang == 'sk')
+		{
+			setCookie('lang','sk',10);		
+		}
+		else if(lang == 'en')
+		{
+			setCookie('lang','en',10);
+		}
+		
+		var language = getCookie('lang');
+		
+		checkLang(language,'yes');
+	}
+	
+	function setCookie(cookieName,cookieValue,nDays) {
+		
+		var today = new Date();
+		var expire = new Date();
+		if (nDays==null || nDays==0) nDays=1;
+		expire.setTime(today.getTime() + 3600000*24*nDays);
+		document.cookie = cookieName+"="+escape(cookieValue) + ";expires="+expire.toGMTString();
+	}
+	
+	function getCookie(c_name)
+	{
+		var c_value = document.cookie;
+		var c_start = c_value.indexOf(" " + c_name + "=");
+		if (c_start == -1)
+		  {
+		  c_start = c_value.indexOf(c_name + "=");
+		  }
+		if (c_start == -1)
+		  {
+		  c_value = null;
+		  }
+		else
+		  {
+		  c_start = c_value.indexOf("=", c_start) + 1;
+		  var c_end = c_value.indexOf(";", c_start);
+		  if (c_end == -1)
+		  {
+		c_end = c_value.length;
+		}
+		c_value = unescape(c_value.substring(c_start,c_end));
+		}
+		return c_value;
+	}
+	
+	function loadModeEN()
+	{
+		$("#siteinfo").text('Contact number 087873955');
+		$("#tr1").css('visibility', 'visible');
+		$("#tr1").css('display','block');
+		$("#tr2").css('visibility', 'hidden');
+		$("#tr2").css('display','none');
+		$("#tr3").text('Home');
+		$("#tr4").text('Gallery');
+		$("#tr5").text('Contact');
+		$("#tr6").text('Products');
+		$("#tr7").text('Images');
+		$("#tr8").text('Frames');
+		$("#tr9").text('Ornaments');
+		$("#tr10").text('Different');
+		$("#tr11").css('visibility', 'visible');
+		$("#tr11").css('display','block');
+		$("#tr12").css('visibility', 'hidden');
+		$("#tr12").css('display','none');
+	}
+	
+	function loadModeSK()
+	{
+		$("#siteinfo").text('Kontaktné číslo 087873955');
+		$("#tr1").css('visibility', 'hidden');
+		$("#tr1").css('display','none');
+		$("#tr2").css('visibility', 'visible');
+		$("#tr2").css('display','block');
+		$("#tr3").text('Domov');
+		$("#tr4").text('Galéria');
+		$("#tr5").text('Kontakt');
+		$("#tr6").text('Produkty');
+		$("#tr7").text('Obrazy');
+		$("#tr8").text('Rámiky');
+		$("#tr9").text('Ornamenty');
+		$("#tr10").text('Rôzne');
+		$("#tr11").css('visibility', 'hidden');
+		$("#tr11").css('display','none');
+		$("#tr12").css('visibility', 'visible');
+		$("#tr12").css('display','block');
+	}
+	
+	</script>
+    
+</head>
+
+<body onLoad="checkLang('x','no');" style="background: url(images/bodyBgTop.jpg), url(images/bodyBgBottom.jpg); background-position: top, bottom; background-repeat: repeat-x;">
+
+<div id="bodywrap">
+	<section id="pagetop">
+		<p id="siteinfo">Contact number 087873955</p>
+        <img src="images/british-flag.jpg" onClick="initLang('en');" style="width:35px; height:23px; margin-left:250px; margin-top:3px;" />
+        <img src="images/flag_sk.gif" onClick="initLang('sk');" style="width:35px; height:23px; margin-left:5px;" />
+     	<p class="email"><a href="contact.php" title="Design by Michael Poncak">Stanislav.Poncak@hotmail.com</a></p>
+	</section>
+
+	<header id="pageheader">
+        <section>
+        	<img src="images/CNC-Logo.png" />
+            <article id="tr1">Beauty for pleasure creates a pleasant home.</article>
+            <article id="tr2">Krása pre radosť vytvára príjemný domov.</article>
+        </section>
+
+		<div id="search">
+			<nav id="sitenav">
+				<ul>
+					<li class="current"><a id="tr3" href="index.html">Home</a></li>
+					<li><a id="tr4" href="gallery.php">Gallery</a></li>
+					<li><a id="tr5" href="contact.php">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+        
+	</header>
+
+	<div id="shadow">
+	<div id="contents">
+		<div id="mySliderBgWhite">
+
+<!-- SLIDER BEGINING -->
+<div id="page-wrap">							
+	<div class="slider-wrap">
+		<div id="main-photo-slider" class="csw">
+			<div class="panelContainer">
+
+				<div class="panel" title="">
+					<div class="wrapper">
+						<a href="#"><img alt="inviting home" class="image" src="inviting-home/pic/01.jpg" /></a>
+                        	<div id="right">
+							<table id="tbside" cellpadding="0" cellspacing="0" style="width: 218px">
+								<tr>
+									<th id="tr6" colspan="2" style="text-align:center;">Products</th>
+								</tr>
+								<tr>
+<td style="width: 109px">
+<a href="gallery.php"><img alt="clocks" height="100" src="inviting-home/pic/obrazy-icon.jpg" width="72" /></a><br />		
+<a id="tr7" href="clocks-and-hourglasses/clocks-hourglasses.htm">Images</a></td>
+<td style="width: 109px">
+<a href="gallery.php"><img alt="decorative boxes" height="100" src="inviting-home/pic/ramiky-icon.jpg" width="72" /></a><br />
+<a id="tr8" href="home-decor-accessories/home-accessories.htm">Frames</a></td>
+								</tr>
+								<tr>
+<td style="width: 109px">
+<a href="gallery.php"><img alt="home lighting" height="100" src="inviting-home/pic/ornamenty-icon.jpg" width="72" /></a><br />		
+<a id="tr9" href="Lighting_Decor.htm">Ornaments</a></td>
+<td style="width: 109px">
+<a href="gallery.php" ><img alt="home furnishing" height="100" src="inviting-home/pic/newels.jpg" /></a><br />		
+<a id="tr10" href="Room_Decor.htm">Different</a></td>
+								</tr>
+							</table>
+							</div>						
+							<!-- <div class="photo-meta-data">
+                            
+							<span class="style6">Text/Intro/Links can go here!</span> : 
+                            
+<a href="green-molding/cfc-free-green-molding.htm"><strong>green molding</strong></a> |  	
+<a href="green-design/green-design.htm"><strong>green design</strong></a>	  |   			
+<a href="invitng_home_press/corbels_shopping.htm"><b>things to consider before you buy corbels</b></a> |  
+<a href="wood-corbels/corbels_wood-brackets_kitchen-counters.htm"><strong>corbels and brackets for kitchen counters</strong></a><br /><br /> 
+<a href="ceiling-domes/ceiling-domes.htm"><strong>the renaissance of ceiling domes</strong></a>  |   
+<a href="http://www.invitinghome.com/home-decor-blog/category/green-design/"><strong>green design blog</strong></a>
+							
+							</div> -->
+					</div>
+				</div>
+                <!--
+				<div class="panel" title="Panel 2">
+					<div class="wrapper">
+                    	<img alt="beautiful home decor" class="image" src="inviting-home/pic/02.jpg" />
+							<div id="right">
+							<table id="tbside" cellpadding="0" cellspacing="0" style="width: 218px">
+								<tr>
+									<th colspan="2">Make Your Home Inviting</th>
+								</tr>
+								<tr>
+<td style="width: 109px">
+<a href="Indirect_Lighting/Indirect_Light_List_A.htm"><img alt="molding for lighting" height="100" src="inviting-home/pic/molding-lighting-2.jpg" width="72" /></a><br />		
+<a href="Indirect_Lighting/Indirect_Light_List_A.htm">Molding for Indirect Lighting</a></td>
+<td style="width: 109px" valign="top">
+<a href="Mirrors/MirrorsList2.htm"><img alt="mirrors" height="100" src="inviting-home/pic/mirrors.jpg" width="72" /></a><br />		
+<a href="Mirrors/MirrorsList2.htm">Mirrors</a></td>
+								</tr>
+								<tr>
+<td style="width: 109px">
+<a href="Fireplace_Accessories/FPAccessoriesListP1.htm"><img alt="fireplace accessories" height="100" src="inviting-home/pic/fp-acces.jpg" width="72" /></a><br />		
+<a href="Fireplace_Accessories/FPAccessoriesListP1.htm">Fireplace Accessories</a></td>
+<td style="width: 109px" valign="top">
+<a href="FPMantels.htm"><img alt="fireplace mantels" height="100" src="inviting-home/pic/fireplce.jpg" width="72" /></a><br />		
+<a href="FPMantels.htm">Fireplace Mantels</a></td>
+								</tr>
+							</table>
+							</div>
+
+							<div class="photo-meta-data">
+							<span class="style6">Hot Topics</span> : 
+	<a href="decorating-inspiration/decorating-fireplace.htm"><strong>fireplace as focal point</strong></a>  |  		
+	<a href="architectural-details/architectural-details-molding.htm"><strong>naked interior syndrome</strong></a> |  					
+	<a href="decorating-inspiration/unique-home-decor.htm"><strong>creating a unique home decor</strong></a>  |  
+	<a href="Mirrors/mirrors_decorating.htm"><strong>decorating with mirrors</strong></a><br /><br />		
+	<a href="home_improvement_projects/home-entry.htm"><strong>home entry</strong></a>  |   
+	<a href="wall-decor/luxury-wall-decor.htm"><strong>luxury wall decor</strong></a>  |  			
+	<a href="http://www.invitinghome.com/home-decor-blog/category/ceiling-decor/"><strong>ceiling decor blog</strong></a>
+    						</div>
+						</div>
+					</div>		
+				
+               <div class="panel" title="Panel 3">
+					<div class="wrapper">
+                    	<img alt="beautiful home decor" class="image" src="inviting-home/pic/04nw.jpg" /> 		
+							<div id="right">
+							<table id="tbside" cellpadding="0" cellspacing="0" style="width: 218px">
+								<tr>
+									<th colspan="2">Make Your Home Inviting</th>
+								</tr>
+								<tr>
+<td style="width: 109px">
+<a href="Indirect_Lighting/Indirect_Light_List_A.htm"><img alt="molding for lighting" height="100" src="inviting-home/pic/molding-lighting-2.jpg" width="72" /></a><br />		
+<a href="Indirect_Lighting/Indirect_Light_List_A.htm">Molding for Indirect Lighting</a></td>
+<td style="width: 109px" valign="top">
+<a href="Mirrors/MirrorsList2.htm"><img alt="mirrors" height="100" src="inviting-home/pic/mirrors.jpg" width="72" /></a><br />		
+<a href="Mirrors/MirrorsList2.htm">Mirrors</a></td>
+								</tr>
+								<tr>
+<td style="width: 109px">
+<a href="Fireplace_Accessories/FPAccessoriesListP1.htm"><img alt="fireplace accessories" height="100" src="inviting-home/pic/fp-acces.jpg" width="72" /></a><br />		
+<a href="Fireplace_Accessories/FPAccessoriesListP1.htm">Fireplace Accessories</a></td>
+<td style="width: 109px" valign="top">
+<a href="FPMantels.htm"><img alt="fireplace mantels" height="100" src="inviting-home/pic/fireplce.jpg" width="72" /></a><br />		
+<a href="FPMantels.htm">Fireplace Mantels</a></td>
+								</tr>
+							</table>
+							</div>
+
+							<div class="photo-meta-data" >
+							<span class="style6">Hot Topics</span> : 
+	<a href="decorating-inspiration/decorating-fireplace.htm"><strong>fireplace as focal point</strong></a>  |  		
+	<a href="architectural-details/architectural-details-molding.htm"><strong>naked interior syndrome</strong></a> |  					
+	<a href="decorating-inspiration/unique-home-decor.htm"><strong>creating a unique home decor</strong></a>  |  
+	<a href="Mirrors/mirrors_decorating.htm"><strong>decorating with mirrors</strong></a><br /><br />		
+	<a href="home_improvement_projects/home-entry.htm"><strong>home entry</strong></a>  |   
+	<a href="wall-decor/luxury-wall-decor.htm"><strong>luxury wall decor</strong></a>  |  			
+	<a href="http://www.invitinghome.com/home-decor-blog/category/ceiling-decor/"><strong>ceiling decor blog</strong></a>
+    						</div>
+						</div>
+					</div>		
+                
+				<div class="panel" title="Panel 4">
+					<div class="wrapper">
+						<img alt="home lighting" class="image" src="inviting-home/pic/03.jpg" />
+                        	<div id="right">
+								<table id="tbside" cellpadding="0" cellspacing="0" style="width: 218px">
+								<tr>
+									<th colspan="2">Light Up Your Life</th>
+								</tr>
+								<tr>
+<td style="width: 109px">
+<a href="Lamps/Lamps.htm"><img alt="lamps" height="100" src="inviting-home/pic/lamps.jpg" width="72" /></a><br />		
+<a href="Lamps/Lamps.htm">Lamps</a></td>
+<td style="width: 109px" valign="top">
+<a href="Sconces/Sconces_List.htm"><img alt="sconces" height="100" src="inviting-home/pic/sconces.jpg" width="72" /></a><br />		
+<a href="Sconces/Sconces_List.htm">Sconces</a></td>
+								</tr>
+								<tr>
+<td style="width: 109px">
+<a href="Chandeliers/chandeliers.htm"><img alt="chandeliers" height="100" src="inviting-home/pic/chandeliers.jpg" width="72" /></a><br />		
+<a href="Chandeliers/chandeliers.htm">Chandeliers</a></td>
+<td style="width: 109px" valign="top">
+<a href="Lanterns/Lanterns.htm"><img alt="lanterns" height="100" src="inviting-home/pic/lanterns.jpg" width="72" /></a><br />		
+<a href="Lanterns/Lanterns.htm">Lanterns</a></td>
+								</tr>
+								</table>
+							</div>
+
+							<div class="photo-meta-data">
+							<span class="style6">Hot Topics</span> : 
+	<a href="home_lighting/lighting-fixtures-selecting.htm"><strong>selecting and positioning lighting fixtures</strong></a> |  		
+	<a href="home_lighting/lighting-emotions.htm"><strong>how lighting affects emotions</strong></a> |  					
+	<a href="home_lighting/lighting-mood.htm"><strong>mood lighting</strong></a>  |  
+	<a href="molding-lighting/built-in_lighting.htm"><strong>built-in lighting</strong></a><br /><br />
+	<a href="Chandeliers/chandeliers-placement.htm"><strong>chandeliers placement</strong></a>  |  	
+	<a href="molding-lighting/living-room-lighting.htm"><strong>living room lighting</strong></a>  |  	
+	<a href="molding-lighting/lighting-entrance-home.htm"><strong>home entrance lighting</strong></a>  |  
+	<a href="molding-lighting/visual-comfort-lighting.htm"><strong>lighting and visual comfort</strong></a> |  		
+	<a href="http://www.invitinghome.com/home-decor-blog/category/lighting/"><strong>home lighting blog</strong></a>
+    						</div>
+						</div>
+					</div>
+                    
+				<div class="panel" title="Panel 5">
+					<div class="wrapper">
+						<img alt="wood carvings and corbels" class="image" src="inviting-home/pic/06.jpg" />
+                        	<div id="right">
+								<table id="tbside" cellpadding="0" cellspacing="0" style="width: 218px">
+								<tr>
+									<th colspan="2">Hand-Carved Elegance</th>
+								</tr>
+								<tr>
+<td style="width: 109px">
+<a href="kitchen_island_legs/wood_legs_kitchen_island.htm"><img alt="kitchen island legs" height="100" src="inviting-home/pic/island-legs.jpg" width="72" /></a><br />		
+<a href="kitchen_island_legs/wood_legs_kitchen_island.htm">Kitchen Island Legs</a></td>
+<td style="width: 109px" valign="top">
+<a href="balusters_newels_wood/wooden_balusters_newels.htm"><img alt="newels and balusters" height="100" src="inviting-home/pic/newels.jpg" width="72" /></a><br />		
+<a href="balusters_newels_wood/wooden_balusters_newels.htm">Newels &amp; Balusters</a></td>
+								</tr>
+								<tr>
+<td style="width: 109px">
+<a href="molding_crown_wood/molding_hardwood.htm"><img alt="carved wood molding" height="100" src="inviting-home/pic/carved-molding.jpg" width="72" /></a><br />		
+<a href="molding_crown_wood/molding_hardwood.htm">Carved Wood Molding</a> </td>
+<td style="width: 109px" valign="top">
+ <a href="Corbels/Wood_Carvings.htm"><img alt="wood carvings" height="100" src="inviting-home/pic/wood-carv.jpg" width="72" /></a><br />		
+<a href="Corbels/Wood_Carvings.htm">Wood Carvings</a></td>
+								</tr>
+								</table>
+							</div>
+
+						
+							<div class="photo-meta-data">
+							<span class="style6">Hot Topics</span> : 
+	<a href="staircase/stair_parts.htm"><strong>stair-case parts</strong></a> |  
+	<a href="kitchen/kitchen-storage-shelves.htm"><strong>kitchen details</strong></a> |  					
+	<a href="kitchen/kitchen-styles.htm"><strong>kitchen style guide</strong></a> |  
+	<a href="wood-corbels/corbels_carvings_wood_selection.htm"><strong>wood selection for corbels and carvings</strong></a> |  						
+	<a href="http://www.invitinghome.com/home-decor-blog/category/corbels/"><strong>blog about corbels</strong></a><br /><br />				
+	<a href="kitchen/kitchen-design-decorating.htm"><strong>kitchen design and decorating</strong></a> |  
+	<a href="kitchen-cabinets/kitchen-hardware.htm"><strong>kitchen hardware </strong></a> |  
+	<a href="http://www.invitinghome.com/home-decor-blog/category/kitchen/"><strong>kitchen blog</strong></a>
+    						</div>
+						</div>
+					</div>
+                    
+				<div class="panel" title="Panel 6">
+					<div class="wrapper">
+						<img alt="home furnishing" class="image" src="inviting-home/pic/08.jpg" />
+                        	<div id="right">
+								<table id="tbside" cellpadding="0" cellspacing="0" style="width: 218px">
+								<tr>
+									<th colspan="2">Make Your Home Inviting</th>
+								</tr>
+								<tr>
+<td style="width: 109px">
+<a href="chairs/chairs.htm"><img alt="chairs" height="100" src="inviting-home/pic/chairs.jpg" width="72" /></a><br />		
+<a href="chairs/chairs.htm">Chairs</a></td>
+<td style="width: 109px" valign="top">
+<a href="Tables/tablesListP2.htm"><img alt="Tables" height="100" src="inviting-home/pic/tables.jpg" width="72" /></a><br />		
+<a href="Tables/tablesListP2.htm">Tables</a></td>
+								</tr>
+								<tr>
+<td style="width: 109px" valign="top">
+<a href="benches/italian-benches.htm"><img alt="benches" height="100" src="inviting-home/pic/benches.jpg" width="72" /></a><br />		
+<a href="benches/italian-benches.htm">Benches</a></td>
+<td style="width: 109px" valign="top">
+<a href="Screens/screens_folding_decorative.htm"><img alt="hand-painted screens" height="100" src="inviting-home/pic/screen.jpg" width="72" /></a><br />		
+<a href="Screens/screens_folding_decorative.htm">Hand-Painted Screens</a></td>
+								</tr>
+								</table>
+							</div>
+
+							<div class="photo-meta-data">
+							<span class="style6">Hot Topics</span><br /><br />
+	<a href="decorating-inspiration/finishing-touches.htm"><strong>finishing touches</strong></a> |  
+	<a href="Decorating_Ideas_Advice/2_Decorating_Sconces.htm"><strong>decorating entry way</strong></a>	
+							</div>
+						</div>
+					</div>
+				
+				<div class="panel" title="Panel 7">
+					<div class="wrapper">
+						<a href="SpechialOffers.htm"><img alt="specials for home decor and home improvement products" class="image" src="inviting-home/pic/sp-of.jpg" /></a>
+					</div>
+				</div>
+-->
+			</div>
+		</div>
+
+		<!-- <a href="#1" class="cross-link active-thumb">
+		<img alt="inviting home" height="66" src="inviting-home/pic/01s.jpg" width="100" class="nav-thumb" /></a>
+		<div id="movers-row">	
+		
+		
+			<div><a href="#2" class="cross-link">
+				<img alt="beautiful home decor" height="66" src="inviting-home/pic/02s.jpg" width="100" class="nav-thumb" /></a></div>
+			<div><a href="#3" class="cross-link">
+				<img alt="home decor inspiration" height="66" src="inviting-home/pic/04s.jpg" width="100" class="nav-thumb" /></a></div>
+			<div><a href="#4" class="cross-link">
+				<img alt="home lighting" height="66" src="inviting-home/pic/03s.jpg" width="100" class="nav-thumb" /></a></div>
+			<div><a href="#5" class="cross-link">
+				<img alt="wood carvings and corbels" height="66" src="inviting-home/pic/06s.jpg" width="100" class="nav-thumb" /></a></div>
+			<div><a href="#6" class="cross-link">
+				<img alt="home furnishing" height="66" src="inviting-home/pic/08s.jpg" width="100" class="nav-thumb" /></a></div>
+			<div><a href="#7" class="cross-link">
+				<img alt="specials for home decor and home improvement products" height="66" src="inviting-home/pic/sp-ofs.jpg" width="100" class="nav-thumb" /></a></div>
+			</div> -->
+
+		</div>
+        
+	</div>
+	
+</div>
+
+<!-- SLIDER ACTIVATOR -->
+<!-- <script type="text/javascript">
+	var slider1=new accordion.slider("slider1");
+	slider1.init("slider");
+</script>
+
+<!-- SLIDER ENDING -->
+
+	</div><!-- WHITE CONTAINER ENDING -->
+
+	<section id="main">
+
+		<div id="leftcontainer">
+
+			<div id="midContent">
+    					<h2 class="mainheading"></h2>
+                        <p id="tr11">Our company is engaged in production of folk, sacred hunting and reliefs, ornaments and other home accessories, which should help you beautify your residential area and thus create for you a pleasant home environment. Precision machining products achieved using CNC milling using computers and the originality of each piece of wood is enhanced by its structure, density, staining and finish. We also manufacture reliefs, ornaments and other designs according to customer requirements.
+</p>
+						<p id="tr12">Naša firma sa zaoberá výrobou ľudových, poľovníckych a sakrálnych  reliefov, ornamentov a iných bytových doplnkov, ktoré Vám maju napomôcť skrášliť Váš bytový priestor a tým vytvoriť pre Vás príjemné prostredie domova.
+Precízne opracovanie výrobkov dosahujeme pomocou  CNC frézy s využitím výpočtovej techniky a jeho originalitu dotvára každý kus dreva svojou štruktúrou, hustotou, zafarbením a povrchovou úpravou. Ponúkame tiež výrobu reliefov, ornamentov a iných návrhov podľa požiadavky zákazníka.
+</p>
+<h2 class="mainheading"></h2>
+    		<!-- <div id="bottom"> 
+    			<figure><p>Krasa pre radost, vytvara prijemny domov.</p></figure>
+    		</div> -->
+			</div>
+		</div>
+
+	</section>
+
+	<div class="clear"></div>
+
+</div>
+
+</div>
+
+<footer id="footer">
+	<center>
+		<p>Copyright &copy; 2012 <a href="contact.php">cncart.clanteam.com</a>
+    	<span class="sep">|</span>
+    	Design by <a href="http://zkaures.comeze.com/" title="Design by Zkaures">Zkaures</a>
+    	</p>
+    </center>
+</footer>
+
+</div>
+
+</body>
+</html>

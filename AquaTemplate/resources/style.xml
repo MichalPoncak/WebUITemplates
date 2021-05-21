@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<galleryStyle xmlns="http://ns.adobe.com/AMG/1.2/">
+<styleInfo xmlns="http://ns.adobe.com/AMG/1.2/">
+<amgVersion>1.3</amgVersion>
+<thumbnailPath></thumbnailPath>
+<previewPath></previewPath>
+<styleName>"Night Life"</styleName>
+<styleDescription></styleDescription>
+<galleryMaker></galleryMaker>
+<creationDate>01/03/07, 01:23:56 PM</creationDate>
+</styleInfo>
+	<appearance>
+		<playOptions playMode='pause' />
+		<galleryInfo>
+			<galleryInfoTextField height='1200' width='635' />
+			<galleryInfoText fontFamily='Myriad Web Pro' linkColor='0000FF' align='left' color='ffffff' size='12' />
+			<galleryInfoBgColor color='000000' alpha='100' />
+			<galleryInfoScrollBars>
+				<galleryInfoScrollBarFill alpha='100' color='000000' />
+				<galleryInfoScrollBarBorder alpha='100' color='000000' />
+				<galleryInfoScrollBarFore alpha='100' color='c0c0c0' />
+			</galleryInfoScrollBars>
+			<galleryInfoBorder alpha='100' color='050505' />
+		</galleryInfo>
+		<slideTransitions slideDuration='5' transitionDuration='.75' transition='fade' />
+		<contactInfo>
+			<contactInfoText color='9F9F9F' alpha='100' fontFamily='Myriad Web Pro' size='11' />
+		</contactInfo>
+		<bandWidthOptions connection='broadband' />
+		<slideshow>
+			<slideshowButtons>
+				<slideshowBtnFore color='c0c0c0' alpha='100' />
+				<slideshowCtrlText color='ffffff' fontFamily='Myriad Web Pro' alpha='100' size='12' />
+				<slideshowBtnBackground color='000000' alpha='0' />
+				<slideshowBtnBorder color='000000' alpha='20' />
+			</slideshowButtons>
+			<videoCtrl>
+				<videoCtrlBgColor alpha='100' color='000000' />
+				<videoDropShadow enabled='false' />
+				<videoCtrlBtnFore color='c0c0c0' alpha='100' />
+				<videoCtrlBorder color='666666' alpha='80' width='1' />
+				<videoCtrlBtnBorder color='000000' alpha='100' />
+				<videoCtrlBtnBackground color='000000' alpha='100' />
+			</videoCtrl>
+			<slideshowBorder color='050505' alpha='100' />
+			<images>
+				<imageBorder color='050505' alpha='100' width='2' />
+				<imageDropShadow enabled='true' />
+			</images>
+			<slideshowMetadata>
+				<metadataField titles='true' height='36' captions='true' />
+				<metadataFieldText fontFamily='Myriad Web Pro' color='ffffff' autoSize='true' alpha='100' size='12' />
+			</slideshowMetadata>
+			<slideshowBgColor color='0F0F0F' alpha='0' />
+		</slideshow>
+		<headerBar>
+			<groupTitle color='FEFEFE' fontFamily='Myriad Web Pro' alpha='100' size='16' />
+			<headerBarEnabled enabled='true' />
+			<pageTitleImg src='' />
+			<pageTitle color='FEFEFE' fontFamily='Myriad Web Pro' alpha='100' size='20' />
+			<headerBarColor color='000000' alpha='100' />
+		</headerBar>
+		<menuBar>
+			<menuBorder alpha='100' color='9F9F9F' />
+			<menuBarEnabled enabled='true' />
+			<menuHover alpha='10' color='FFFFFF' />
+			<menuText alpha='100' color='9F9F9F' />
+			<menuBgColor alpha='100' color='000000' />
+		</menuBar>
+		<mediaPosition y='0' positionType='auto' fitAtStart='true' videoScale='upDown' imageScale='fitToScreen' x='0' height='264' width='360' />
+		<metadataOptions metadataPosition='underPhotos' />
+		<viewOptions startingView='galleryScrollingLeft' />
+		<background>
+			<backgroundBgImg alpha='100' src='' />
+			<backgroundBgColor alpha='100' color='000000' />
+		</background>
+		<thumbnailView>
+			<thumbnailViewBorder color='050505' alpha='100' />
+			<thumbnailViewBgColor alpha='0' color='000000' />
+			<thumbnails>
+				<thumbHover color='FEFEFE' alpha='100' />
+				<thumbSelected color='9F9F9F' alpha='100' />
+				<thumbDropShadow enabled='true' />
+				<thumbBorder color='080808' alpha='100' width='2' />
+			</thumbnails>
+			<thumbnailViewScrollBars>
+				<thumbnailViewScrollBarFill color='000000' alpha='100' />
+				<thumbnailViewScrollBarBorder alpha='100' color='000000' />
+				<thumbnailViewScrollBarFore color='c0c0c0' alpha='100' />
+			</thumbnailViewScrollBars>
+			<thumbnailViewControls>
+				<thumbViewBtnBackground alpha='100' color='000000' />
+				<thumbViewCtrlText alpha='100' color='ffffff' />
+				<thumbViewBtnFore color='c0c0c0' alpha='95' />
+				<thumbViewBtnBorder color='000000' alpha='0' />
+			</thumbnailViewControls>
+		</thumbnailView>
+		<metadataView>
+			<metadataViewBtnFore color='c0c0c0' alpha='100' />
+			<metadataViewBgColor color='0F0F0F' alpha='100' />
+			<metadataViewBorder alpha='100' color='0F0F0F' />
+			<metadataViewBtnBorder color='000000' alpha='100' />
+			<metadataViewBtnBackground alpha='100' color='000000' />
+			<metadataViewField titles='true' captions='true' widthPercentage='.25' />
+			<metadataViewText fontFamily='Myriad Web Pro' linkColor='0000FF' align='left' color='CECDCD' size='12' />
+			<metadataViewTitle fontFamily='Myriad Web Pro' linkColor='0000FF' align='left' color='FFFFFF' size='14' />
+		</metadataView>
+	</appearance>
+</galleryStyle>
+
